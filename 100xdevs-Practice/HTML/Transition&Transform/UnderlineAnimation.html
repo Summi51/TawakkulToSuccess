@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Underline Animation (Left → Right)</title>
+
+  <style>
+    a {
+      text-decoration: none;
+      display: inline-block;
+      position: relative;
+    }
+
+    a::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      background: red;
+      height: 2px;
+      transition: all 0.5s ease;
+      left: 0;
+      bottom: -4px;
+    }
+
+    a:hover::after {
+      width: 100%;
+    }
+
+    /* div::before{
+      content: "))";
+     } */
+    /* div::after{
+      content: "))";
+     } */
+  </style>
+</head>
+
+<body>
+  <!-- <div>hii</div> -->
+  <a href="#">Home</a>
+</body>
+
+</html>
+
+
+<!-- Excellent question! This is a very common interview concept.
+<a> is an inline element by default, and transform does not work properly on inline elements. -->
+
+<!-- ::after and ::before worked
+
+  <div>hii</div>
+   div::after{
+      content: "))";
+     } -->
+
+<!-- ))hii - before
+ hii)) - after -->

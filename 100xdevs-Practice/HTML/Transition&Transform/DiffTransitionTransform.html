@@ -1,0 +1,146 @@
+<!-- Transition
+
+Makes the change happen smoothly over time. -->
+
+<!-- Transform
+
+Changes the appearance/position/size of an element. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition and Translate</title>
+    <style>
+        .main {
+            width: 100px;
+            height: 100px;
+            border: 3px solid rgb(218, 14, 14);
+            background-color: rgb(42, 108, 179);
+            transition: all 1s ease;
+        }
+
+        .main:hover {
+            /* transform: rotate(60deg); */
+            /* transform: rotateX(60deg); */
+            /* transform: rotateY(60deg); */
+            /* transform: rotateZ(60deg);  */
+            /* transform: rotate3d(2, 2, 0, 45deg); x, y, z, deg */
+            /* transform: rotate3d(1, 1, 1, 180deg); it look 3D  */
+            /* transform: rotate(0.5turn); or 180deg */
+            /* transform: rotate(3.14rad);
+            transform: rotate(200grad); */
+
+            /* Scale (Zoom)*/
+            /* transform: scale(1.2);*/
+            /* transform: scale3d(0, 0, 2); */
+
+            /* Move Right and Move Down */
+            /* transform: translateX(100px); */
+            /* transform: translateY(100px); */
+
+            /* transform: translate(100px, 100px); */
+            /* transform: translate(100px, -100px); */
+            /* transform: translate3d(-50%, -50%, 0px); */
+
+            /* //slider type  */
+/* transform: skewX(50deg); */
+/* transform: skew(50deg, 50deg);*/
+
+/* transform: matrix(1, 2, 3, 4, 2, 1); skew x, y and scale x, y and translate x, y */
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main">
+
+    </div>
+</body>
+
+</html>
+
+
+
+<!--//==============================// -->
+
+<!-- Rotate 360 and 180 degrees
+
+ .main:hover {
+    transform: rotate(180deg);
+}
+.main:hover {
+    transform: rotate(360deg);
+} -->
+
+<!-- //==============================//
+
+1turn = 360°
+0.5turn = 180°
+0.25turn = 90°
+2turn = 720° -->
+
+<!-- transform: rotate(3.14rad);
+transform: rotate(200grad); -->
+
+<!-- //=================// -->
+
+<!-- Q: What units can rotate() use?
+
+Answer:
+rotate() accepts several angle units:
+
+deg (degrees) ✅ Most commonly used
+turn (full rotations)
+rad (radians)
+grad (gradians) -->
+
+<!-- 👉 Use deg because it's the most common and easiest to read. -->
+
+<!-- //*******************************************************************// -->
+
+<!-- Scale (Zoom)  => transform: scale(1.2); -->
+
+<!-- transform: scale3d(sx, sy, sz);
+
+It accepts 3 values only -->
+
+<!-- //*******************************************************************// -->
+
+<!-- translate -->
+<!-- /* Move Right and Move Down */
+ /* transform: translate(100px, 100px); */ x, y
+            /* transform: translateX(100px); */
+            /* transform: translateY(100px); */ -->
+
+            <!-- //====================================// -->
+
+ <!-- Rotate + Scale Together
+.main:hover {
+    transform: rotate(45deg) scale(1.2);
+}
+Move + Rotate
+.main:hover {
+    transform: translateX(100px) rotate(180deg);
+} -->
+<!-- 
+Interview Tip
+
+transform functions can be combined:
+
+transform: translateX(50px) rotate(45deg) scale(1.2); -->
+
+
+            <!-- //====================================// -->
+
+            <!-- /* //slider type  */
+/* transform: skew(50deg); x, y also*/ -->
+
+  <!-- //====================================// -->
+
+<!-- /* transform: matrix(1, 2, 3, 4, 2, 1); skew x, y and scale x, y and translate x, y */ -->

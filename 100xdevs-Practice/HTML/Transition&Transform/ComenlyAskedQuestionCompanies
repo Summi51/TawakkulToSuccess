@@ -1,0 +1,18 @@
+
+ commonly asked in Amazon, Google, Microsoft, Adobe, Walmart, Flipkart, etc practical.
+
+ | Practical Question                  | HTML |    CSS    | JavaScript |
+| ----------------------------------- | :--: | :-------: | :--------: |
+| Center a Div                        |   ✅  |     ✅     |      ❌     |
+| Button Hover Animation              |   ✅  |     ✅     |      ❌     |
+| Card Hover Effect                   |   ✅  |     ✅     |      ❌     |
+| Underline Animation                 |   ✅  |     ✅     |      ❌     |
+| Image Zoom                          |   ✅  |     ✅     |      ❌     |
+| Rotate Icon                         |   ✅  |     ✅     |      ❌     |
+| Loading Spinner                     |   ✅  |     ✅     |      ❌     |
+| Responsive Navbar (layout only)     |   ✅  |     ✅     |      ❌     |
+| Tooltip                             |   ✅  |     ✅     |      ❌     |
+| Dropdown (hover)                    |   ✅  |     ✅     |      ❌     |
+| Modal Popup (on hover or `:target`) |   ✅  |     ✅     |      ❌     |
+| Accordion (`<details>`)             |   ✅  | ❌/Minimal |      ❌     |
+| Sliding Sidebar (hover)             |   ✅  |     ✅     |      ❌     |

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pen</title>
+    <style>
+        .main {
+            position: relative;
+            width: 50px;
+            height: 50px;
+            display: inline-block;
+            border: 1px solid red;
+        }
+
+        button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        .main-1 {
+            position: absolute;
+            top: 80px;
+            left: 50px;
+            display: none;
+            cursor: pointer;
+
+        }
+
+        .main:hover .main-1{
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main">
+        <button>k</button>
+        <div class="main-1">hi</div>
+    </div>
+
+    </div>
+</body>
+
+</html>

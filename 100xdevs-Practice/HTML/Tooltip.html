@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pen</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+
+        .text {
+            position: absolute;
+            bottom: 130%;
+            left: 50%;
+            background: rgb(217, 121, 121);
+            color: rgb(42, 106, 179);
+            display: none;
+            padding: 8px 12px;
+        }
+
+        .tooltip:hover .text{
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="tooltip">
+        Who are you?
+        <span class="text">Hi 👋, I am Samreen.</span>
+    </div>
+</body>
+
+</html>
