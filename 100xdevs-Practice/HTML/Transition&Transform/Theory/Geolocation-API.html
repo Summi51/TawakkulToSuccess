@@ -1,0 +1,41 @@
+Imagine you open Google Maps.
+
+Google asks:
+
+📍 "Allow this website to know your location?"
+
+When you click Allow, the browser uses the Geolocation API.
+
+navigator.geolocation.getCurrentPosition((position)=>{
+    console.log(position.coords.latitude);
+    console.log(position.coords.longitude);
+});
+
+
+You
+ │
+ ▼
+Browser
+
+ │
+ ▼
+GPS
+
+ │
+ ▼
+Latitude & Longitude
+
+ │
+ ▼
+Website
+
+//=========
+
+Is it JavaScript or HTML?
+JavaScript API
+
+Does it need permission?
+Needs permission
+
+Does it work on HTTPS?
+Mostly works only on HTTPS

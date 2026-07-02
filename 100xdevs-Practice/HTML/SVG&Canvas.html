@@ -1,0 +1,457 @@
+Pencil se Draw Karna (SVG)
+
+1. ek circle banao, Teacher samajh jaati hain.
+again "Rectangle banao."
+Teacher ko pata hai ye shapes hain.
+
+
+2. Browser ko pata hota hai:
+
+Ye circle hai.
+
+Ye rectangle hai.
+
+Ye line hai.
+
+======
+SVG Example
+
+Browser padhta hai
+
+Circle
+
+↓
+
+Radius = 50
+
+↓
+
+Color = Red
+
+↓
+
+Draw Circle
+//=====**********************************************************========//
+
+Paint Brush 🎨 (Canvas)
+
+"Is white paper par paint kar do." brush uthati hain. Paint karti hain. Ho gaya.
+
+Ab usko ko ye yaad nahi hai ki, Ye circle tha. Ye rectangle tha. Unhe sirf paint yaad hai.
+
+Ye Canvas hai.
+
+=========
+
+Canvas Example
+
+
+1. Blank White Board, Kuch bhi nahi. Ab JavaScript bolta hai
+Draw rectangle
+
+Browser
+
+🖌️
+
+Paint
+
+Paint
+
+Paint
+
+Output
+
+
+//////////////////////////////////////
+
+Sabse bada Difference
+
+1. SVG
+
+Browser kehta hai
+
+Ye Circle hai
+
+Ye Rectangle hai
+
+Ye Line hai
+
+Browser sab yaad rakhta hai.
+
+2. Canvas
+
+Browser kehta hai
+
+Mujhe nahi pata.
+
+Bas pixels paint kar diye.
+
+
+//=============
+
+Zoom Example
+
+Real Life Example---
+
+1. SVG
+
+Google Logo
+
+Instagram Icon
+
+WhatsApp Icon
+
+YouTube Logo
+
+Maps
+
+Charts
+
+Sab SVG.
+
+Kyun?
+
+Kyuki zoom karne par bhi clear.
+
+
+
+2. Canvas
+
+Games 🎮
+
+Paint App 🎨
+
+Whiteboard
+
+Photo Editor
+
+Animation
+
+Yaha har second hazaaro cheeze draw hoti hain.
+
+Canvas fast hota hai.
+
+///================
+
+HTML aur JS ka relation
+
+1. SVG - HTML hi kaafi hai. Browser khud draw kar dega. JavaScript optional.
+
+2. Canvas - HTML sirf board deta hai.
+<canvas></canvas>
+Ab JavaScript bolega
+
+Square banao.
+
+Circle banao.
+
+Line banao.
+
+Tab drawing hogi.
+
+
+//=============================
+
+Interview Questions
+Q1. SVG full form?
+
+Scalable Vector Graphics
+
+Q2. Canvas full form?
+
+HTML Canvas
+
+Q3. Which is better for Logo?
+
+✅ SVG
+
+Q4. Which is better for Games?
+
+✅ Canvas
+
+Q5. Which supports Accessibility?
+
+✅ SVG
+
+Browser ko pata hai
+
+Circle
+
+Rectangle
+
+Text
+
+Screen Reader samajh sakta hai.
+
+Canvas me browser ko sirf pixels dikhte hain.
+
+Q6. Which stays clear after zoom?
+
+✅ SVG
+
+Q7. Which becomes blurry?
+
+✅ Canvas
+
+
+
+//============================================//
+
+1. SVG (Shape Based)
+
+Imagine you tell the browser:
+
+"Draw a circle."
+
+Browser understands circle.
+
+Code
+<!DOCTYPE html>
+<html>
+<body>
+
+<svg width="200" height="200">
+
+    <circle
+        cx="100"
+        cy="100"
+        r="60"
+        fill="red"/>
+
+</svg>
+
+</body>
+</html>
+
+Output
+
+      🔴
+
+Actually browser stores
+
+Circle
+
+Center X =100
+
+Center Y =100
+
+Radius =60
+
+Color =Red
+
+Browser knows it is a circle.
+
+
+====================
+
+2. Canvas (Pixel Based)
+
+HTML
+
+<canvas id="box" width="200" height="200"></canvas>
+
+Nothing appears.
+
+Output
+
+⬜
+
+(blank board)
+
+Now JavaScript
+
+const canvas = document.getElementById("box");
+
+const ctx = canvas.getContext("2d");
+
+ctx.fillStyle="red";
+
+ctx.fillRect(40,40,100,100);
+
+Output
+
+🟥
+
+Browser DOES NOT know
+
+Rectangle
+
+Browser only knows
+
+Paint pixels
+
+Paint pixels
+
+Paint pixels
+
+//=====================//
+
+Browser Structure
+SVG
+HTML
+
+↓
+
+<svg>
+
+↓
+
+<circle>
+
+↓
+
+Browser understands
+
+↓
+
+Draw Circle
+
+
+==========
+
+Canvas
+HTML
+
+↓
+
+<canvas>
+
+↓
+
+Empty Board
+
+↓
+
+JavaScript
+
+↓
+
+Draw Rectangle
+
+↓
+
+Pixels Painted
+
+//==============//
+
+Zoom Difference
+
+SVG - Small ⭐ -> Zoom -> ⭐⭐⭐⭐⭐⭐ -> Still Clear
+
+Canvas - Small ⭐ -> Zoom ->  Blur
+
+//==========//
+
+Why Game Uses Canvas?
+
+
+Suppose 100 enemies Every second 60 times everything changes. Canvas can paint very fast.
+
+///=======//
+
+Why Icons Use SVG?
+
+Google Logo G Zoom 800% Still G Perfect.
+
+====================================================
+
+Interview Practical?
+
+Almost NEVER.
+
+Google won't ask
+
+Draw SVG.
+
+or Draw Canvas.
+
+Instead they ask theory.
+
+Product Company Questions
+Amazon
+
+Difference between SVG and Canvas?
+
+Google
+
+Why is SVG scalable?
+
+Microsoft
+
+Which is better for charts?
+
+Answer
+
+SVG
+
+Adobe
+
+Which is better for games?
+
+Canvas
+
+Atlassian
+
+Why is Canvas not accessible?
+
+Walmart
+
+When should we use SVG?
+
+Flipkart
+
+Can SVG be styled using CSS?
+
+Answer
+
+Yes.
+
+Uber
+
+Can Canvas be animated?
+
+Answer
+
+Yes, usually with JavaScript.
+
+Practical Asked?
+
+Very Rare.
+
+Mostly theory.
+
+Example
+
+Difference between Canvas and SVG.
+
+Which one is faster?
+
+Which one is scalable?
+
+Which supports Accessibility?
+
+Which one is used for games?
+
+Which one is used for icons?
+
+Interview Cheat Sheet
+Question	Answer
+Full Form	Scalable Vector Graphics
+Canvas	HTML Drawing Area
+Shape Based	SVG ✅
+Pixel Based	Canvas ✅
+Zoom Quality	SVG ✅
+Blur on Zoom	Canvas ✅
+Icons	SVG ✅
+Logos	SVG ✅
+Charts	SVG ✅
+Games	Canvas ✅
+Whiteboard App	Canvas ✅
+JavaScript Required	Canvas (usually) ✅
+Accessibility	SVG ✅
+CSS Styling	SVG ✅
+
+
+https://chatgpt.com/backend-api/estuary/content?id=file_000000008c3471f5a98f7c6ae50245a3&ts=495223&p=fs&cid=1&sig=ee5fc40ee7e512935ee289b54a45f30a215339710f624f62ebad3c6f64f4d92f&v=0
+
+

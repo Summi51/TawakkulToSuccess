@@ -1,0 +1,170 @@
+Case 1: Reflow (Layout)
+
+Before
+
+A  B  C
+
+After increasing A's width
+
+AAAA   B   C
+
+Now B and C must shift.
+
+
+So browser repeats:
+
+DOM ❌ No
+
+CSSOM ❌ No
+
+Render Tree ✅ Already exists
+
+Layout ✅ Again
+
+Paint ✅ Again
+
+Composite ✅ Again
+
+So Layout is recalculated, and because positions changed, Paint and Composite also happen again.
+
+
+//=======================================
+
+Case 2: Repaint
+
+background: red;
+
+Size didn't change.
+
+Position didn't change.
+
+Only color changed.
+
+Before
+
+😀 Blue
+
+After
+
+😀 Red
+
+I only need to paint it again."
+
+So it repeats only:
+
+Layout ❌
+
+Paint ✅
+
+Composite ✅
+
+
+//=======================================
+
+
+Case 3: Transform (Composite)
+
+transform: translateX(100px);
+
+Only
+
+Composite ✅
+No Layout.
+
+No Paint.
+
+are the fastest for animations.
+
+transform
+opacity
+
+//=======================
+
+Interview Diagram
+
+Change width
+        │
+        ▼
+Layout
+        ▼
+Paint
+        ▼
+Composite
+
+//=========
+
+Change background-color
+        │
+        ▼
+Paint
+        ▼
+Composite
+
+//==========
+
+transform
+opacity
+        │
+        ▼
+Composite Only
+
+
+| Change             | Layout | Paint | Composite |
+| ------------------ | :----: | :---: | :-------: |
+| `width`            |    ✅   |   ✅   |     ✅     |
+| `height`           |    ✅   |   ✅   |     ✅     |
+| `margin`           |    ✅   |   ✅   |     ✅     |
+| `padding`          |    ✅   |   ✅   |     ✅     |
+| `background-color` |    ❌   |   ✅   |     ✅     |
+| `color`            |    ❌   |   ✅   |     ✅     |
+| `border-color`     |    ❌   |   ✅   |     ✅     |
+| `opacity`          |    ❌   |   ❌   |     ✅     |
+| `transform`        |    ❌   |   ❌   |     ✅     |
+
+
+Why is transform better than margin-left for animations?
+
+"margin-left changes the layout, so it triggers Layout (Reflow), Paint and Composite, which is more expensive. 
+transform doesn't affect the layout; it only triggers Composite, making animations smoother and more performant."
+
+
+//==========================
+
+
+Lesson 9: Why CSS blocks rendering
+
+Browser gets
+
+<h1>Hello</h1>
+
+Then
+
+h1{
+color:red;
+}
+
+Browser waits.
+
+Because if it shows first
+
+Hello (black)
+
+then CSS comes
+
+Hello (red)
+
+User sees flicker.
+
+So browser waits.
+
+HTML
+
+↓
+
+CSS
+
+↓
+
+Render
+
+That's why CSS is render-blocking.

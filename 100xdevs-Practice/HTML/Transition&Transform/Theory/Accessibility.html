@@ -1,0 +1,197 @@
+
+Imagine there are 3 students.
+
+👩 Student 1 → Can see and use a mouse.
+
+👨‍🦯 Student 2 → Cannot see (blind).
+
+👨‍🦽 Student 3 → Cannot use a mouse.
+
+Can all three use your website?
+
+If the answer is YES, your website is Accessible
+
+=========================
+
+A Screen Reader speaks it. Think of it as a robot.
+
+Website
+
+↓
+
+Robot Reads
+
+↓
+
+Speaks
+
+↓
+
+User Listens 🎧 
+
+Robot Reads - Screen Reader Chrome Extension.
+
+
+ //===============//
+
+ 1. <button>Login</button>
+
+ Robot says => Button => Login
+
+ 2. alt 
+
+ <img src="dog.jpg"
+     alt="Brown dog running">
+
+Robot -> says Image Brown dog running
+if not used  alt, robot says img not understand the blind persone.
+
+Interview Question
+
+Why use alt?
+
+✅ Screen Readers
+✅ Image not loading
+✅ SEO
+
+//============//
+3. label
+
+<label>Name</label>
+
+<input type="text">
+
+Name
+____________ -> User understands.
+
+
+4. aria-label
+
+<button
+aria-label="Search">
+🔍
+</button>
+Robot says -> Button Search
+
+5. label Visible
+Name
+__________
+
+2. aria-label
+
+Hidden
+Only Screen Reader reads it.
+
+
+6. Semantic HTML
+
+<div> - Browser Everything is DIV.
+       but 
+<header> , <nav>, <main>, <section>, <article>, <footer>
+
+Browser and Screen Reader understands.
+
+This is Header.
+
+This is Navigation.
+
+This is Main Content.
+
+
+7. Keyboard Navigation
+
+<button>
+Home
+</button>
+
+<button>
+About
+</button>
+
+Press TAB keyboard.
+
+Home
+↓
+About
+
+8. Screen Reader
+
+<nav> -> was used.
+
+If you used -> <div>
+
+Robot gets confused. Robot speaks , Navigation ,Home, About, Contact
+
+//============================//
+
+Product Company Interview Questions
+Amazon
+
+What is Accessibility?
+
+Google
+
+Difference between
+
+label
+
+and
+
+aria-label?
+
+Microsoft
+
+Why do we use alt?
+
+Adobe
+
+What is Semantic HTML?
+
+Atlassian
+
+Why should we use
+
+header
+
+instead of div?
+
+Walmart
+
+What is Keyboard Navigation?
+
+Uber
+
+What is Screen Reader?
+
+Easy Revision
+
+Topic	                       Remember
+alt	                        Description of image
+label	                    Visible text for input
+aria-label	                Hidden description for screen readers
+Semantic HTML	            Use meaningful tags like <header>, <main>, <nav>
+Keyboard Navigation	        User can navigate with Tab
+Screen Reader	            Reads website aloud for visually impaired users
+
+
+//=====================//
+
+⭐ Interview Tip
+For Amazon, Google, Microsoft, and other product-based companies, accessibility questions are mostly theory + small practical fixes.
+For example, they may show you this:
+
+<img src="logo.png">
+<input type="text">
+<button>🔍</button>
+
+And ask:
+
+"How would you make this accessible?"
+
+A strong answer is:
+
+Add alt to the image.
+Add a <label> for the input.
+Add aria-label="Search" to the icon-only button.
+Ensure everything is reachable using the Tab key.
+Use semantic HTML where appropriate.

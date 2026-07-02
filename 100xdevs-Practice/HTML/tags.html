@@ -1,0 +1,556 @@
+1. <textarea rows="4" cols="20"></textarea>
+Used for multi-line input.
+__________________
+|                |
+|                |
+|                |
+|________________|
+
+| Input       | Textarea       |
+| ----------- | -------------- |
+| Single line | Multiple lines |
+
+//=================
+
+2. <select></select>
+Creates a dropdown.
+<select>
+  <option>India</option>
+  <option>USA</option>
+</select>
+
+India ▼
+
+//==================
+
+3. <fieldset></fieldset>
+Groups related form fields.
+
+-----------------------
+|                      |
+|  Input   input       |
+-----------------------
+<fieldset>
+  <input type="text">
+    <input type="text">
+</fieldset>
+multiple input inside.
+
+//==================
+4. <legend></legend>
+
+<fieldset>
+  <legend>Personal Info</legend>
+  <input type="text" placeholder='First Name'>
+  <input type="text" placeholder='Last Name'>
+</fieldset>
+
+---Personal Info-----------
+|                         |
+| First Name   Last Name  |
+---------------------------
+
+Gives a title to a fieldset - Personal Info
+
+
+Q. Why use <fieldset> and <legend>?
+
+Answer: To group related form controls and provide a meaningful title.
+
+//==================
+
+5.<picture>
+
+Used for responsive images.
+
+<picture>
+  <img width='100' src="https://hips.hearstapps.com/hmg-prod/images/dahlia-1508785047.jpg?crop=1.00xw:0.669xh;0,0.0136xh" alt="Nature">
+</picture>
+
+//=======================
+6. <source>
+
+Used inside <picture>, <audio>, or <video>.
+
+<picture>
+<source media="(max-width:600px)"   
+  
+srcset="https://media.istockphoto.com/id/183412466/photo/eastern-bluebirds-male-and-female.jpg?s=612x612&w=0&k=20&c=6_EQHnGedwdjM9QTUF2c1ce7cC3XtlxvMPpU5HAouhc=">
+<!-- mobile screen pr show -->
+
+
+<img width='100' src="">   // desktop par show if give image in src
+
+</picture>
+
+or 
+
+<picture>
+
+<source media="(max-width:600px)"
+srcset="mobile.jpg">
+
+<img src="desktop.jpg">
+
+</picture>
+
+
+If screen width ≤ 600px, browser loads mobile.jpg; otherwise it loads desktop.jpg.
+
+//=======================
+
+Interview
+
+Q. Difference between <img> and <picture>?
+
+<img> → One image.
+<picture> → Different images based on screen size or conditions.
+
+
+//===================
+8. Tables
+
+a. <table>
+<tr>
+<td>Samreen</td>
+</tr>
+</table>
+
+or 
+
+b. <thead></thead> // Heading
+
+<thead>
+<tr>
+<th>Name</th>
+</tr>
+</thead>
+
+or 
+
+c. <tbody> contains the main data of the table.
+<table border="1">
+
+  <tbody>
+
+    <tr>
+      <td>Samreen</td>
+    </tr>
+
+    <tr>
+      <td>Samreen2</td>
+    </tr>
+
+  </tbody>
+
+</table>
+
+Think of it as the students list.
+
+d. <tfoot></tfoot>
+
+<tfoot> contains the summary/footer of the table.
+    //// code
+<table border="1">
+<tfoot>
+<tr>
+<td>Total</td>
+<td>Average</td>
+</tr>
+</tfoot>
+</table>
+
+//*************
+
+Table
+
+↓
+
+<thead>
+
+↓
+
+<tbody>
+
+↓
+
+<tfoot>
+
+Because these summarize the table.
+//===================
+
+9. required 
+
+Makes a field mandatory.
+
+Example
+<input
+type="email"
+required>
+
+Without filling it, the form won't submit.
+
+. What does required do?
+
+Answer: It prevents form submission until the field is filled.
+
+//================
+
+10. pattern 
+
+Validates input using a regular expression.
+
+Example
+
+Only 10 digits:
+
+<input
+pattern="[0-9]{10}">
+
+Accepted
+
+9876543210
+
+Rejected
+
+98ABC
+
+//000000000000000000000
+
+Q. Why use pattern?
+
+Answer: To validate user input against a specified format.
+
+Think of pattern as a security guard at the school gate.
+
+Student types phone number
+        │
+        ▼
+Clicks Submit
+        │
+        ▼
+👮 Security Guard (pattern)
+
+Is it exactly 10 digits?
+
+Yes ✅ → Enter
+
+No ❌ → Stop
+//==============
+
+11. autocomplete
+Shows previously entered values.
+
+//==================
+
+12. novalidate 
+
+Disables HTML form validation.
+
+Example
+<form novalidate>
+
+<input
+type="email">
+
+</form>
+
+The browser won't check if the email is valid before submitting.
+
+Interview
+
+Q. What does novalidate do?
+
+Answer: It disables built-in HTML validation for the form.
+
+//==============
+7. <form></form>
+
+<form> is used to collect user input and send it to a server.
+
+<form>
+  <input type="text" placeholder="Name">
+  <button>Submit</button>
+</form>
+
+or
+
+<form action="/login">
+  <input type="email">
+  <button>Login</button>
+</form>
+
+Q. What is the purpose of <form>?
+
+Answer: It collects user input and submits it to the server.
+
+//=======================
+8. 
+
+Q. Difference between <section> and <article>?
+
+Answer:
+<article> → Independent content that can stand alone.
+<section> → A thematic section of a page, usually part of a larger document.
+
+
+//====================================
+
+9. <input
+autocomplete="on">
+
+or 
+
+<input
+autocomplete="off">
+One line to remember:
+👉 autocomplete="on" = Browser remembers.
+👉 autocomplete="off" = Browser forgets (doesn't suggest saved values).
+
+
+*******************
+
+Interview Question
+Q. What is autocomplete?
+
+Answer:
+
+autocomplete is an HTML attribute that tells the browser whether it should remember and suggest previously entered values.
+
+Q. Difference between autocomplete="on" and autocomplete="off"?
+
+| `autocomplete="on"`              | `autocomplete="off"`                                   |
+| -------------------------------- | ------------------------------------------------------ |
+| Browser remembers previous input | Browser does not suggest previous input                |
+| Shows suggestions                | No suggestions                                         |
+| Good for name, email, address    | Good for OTP or fields where suggestions aren't wanted |
+
+
+//===========================
+
+10. tabindex
+
+Without tabindex
+
+<div>Home</div>
+
+<button>Login</button>
+
+Press Tab
+
+Login
+
+Home skip ho gaya.
+
+or===========
+
+With tabindex
+
+<div tabindex="0">
+Home
+</div>
+
+<button>
+Login
+</button>
+
+Now
+
+Tab
+
+↓
+
+Home
+
+↓
+
+Login
+
+a. tabindex="0" ✅ (Most Common)
+
+<div tabindex="0">
+    Home
+</div>
+
+<br>
+
+<button>
+    Login
+</button> // focus, press space in keyboard
+
+check this image
+/Users/samreeninayat/Desktop/Screenshot 2026-07-01 at 9.56.29 PM.png
+
+element ko normal Tab order me include karo.
+Interview me sabse zyada yehi use hota hai.
+
+b. tabindex="-1"
+<div tabindex="-1">
+Hello
+</div>
+
+Meaning
+
+"Tab dabane par yahan mat aana."
+javaScript se focus kara sakte
+
+c. 3. tabindex="1"
+<div tabindex="1">
+Home
+</div>
+
+<button>
+Login
+</button>
+
+Meaning Priority. Browser pehle
+
+
+##################
+
+Why do we use tabindex?
+`
+To make an element focusable using the keyboard.
+
+##################
+
+No need of tabindex. Already support Tab.
+Browser automatically focuses them.
+<input> <button> <a> <select> <textarea></textarea>
+
+#################
+elements need tabindex? default me focusable nahi.
+<div><span><section><article>
+
+❌ Avoid positive values like tabindex="1" unless there's a very specific need,
+//===========================
+
+. <main> ⭐
+<main>
+  <h1>Learn HTML</h1>
+  <p>Welcome to my website.</p>
+</main>
+
+every page have one main tag.
+
+<main> contains the primary content of the webpage.
+
+//==========================
+<section></section>
+
+<section>
+  <h2>Technology</h2>
+  <p>AI News</p>
+</section>
+
+<section> groups related content under one topic.
+
+//=======================
+Agar us content ko copy karke kisi aur website par rakh do aur phir bhi uska meaning same rahe, to wo <article> hai.
+
+Examples:
+
+Blog Post
+News Article
+Product Review
+Facebook Post
+
+<article>
+  <h2>iPhone Review</h2>
+  <p>Battery is excellent.</p>
+</article>
+
+<article> contains self-contained content that can stand alone.
+
+//=======================
+<aside></aside>
+Side information.
+Advertisement
+<aside>
+  Advertisement
+</aside>
+
+<aside> contains related or secondary content.
+//========================
+
+//$$$$$$$$$$$$$$$$$$$$$$$$$
+
+School (MAIN)
+│
+├── Class 10A (SECTION)
+│     ├── Student 1 Project (ARTICLE)
+│     ├── Student 2 Project (ARTICLE)
+│
+├── Class 10B (SECTION)
+│     ├── Student 1 Project (ARTICLE)
+│     ├── Student 2 Project (ARTICLE)
+│
+├── Class 10C (SECTION)
+│     ├── Student 1 Project (ARTICLE)
+│
+└── Notice Board (ASIDE)
+      ├── Holiday Notice
+      ├── Advertisement
+      └── Exam Date
+      
+//=======================
+⭐ Product-Based Company Interview Questions
+
+Amazon
+What is the difference between <form> and <fieldset>?
+What is required?
+What is autocomplete?
+
+
+Google
+Difference between <article> and <section>?
+Why use <picture>?
+What is pattern?
+
+Microsoft
+Difference between <textarea> and <input>?
+What is novalidate?
+
+Adobe
+Difference between <img> and <picture>?
+Why use <legend>?
+
+Atlassian
+Explain <thead>, <tbody>, and <tfoot>.
+What is the purpose of semantic form elements?
+
+Walmart
+How do you create a responsive image?
+What is the purpose of the <source> tag?
+
+
+⭐ Quick Revision Table
+
+<form>	Collects user input
+<textarea>	Multi-line text
+<select>	Dropdown list
+<fieldset>	Groups related form controls
+<legend>	Title for a fieldset
+<picture>	Responsive images
+<source>	Alternate media/image sources
+<table>	Creates a table
+<thead>	Table header
+<tbody>	Table body
+<tfoot>	Table footer
+required	Mandatory field
+pattern	Input format validation
+autocomplete	Suggest previously entered values
+novalidate	Disables HTML validation
+<article>	Independent, self-contained content
+
+🎯 Which ones should you memorize?
+
+If you're targeting Amazon, Google, or other product-based companies, make sure you're comfortable explaining and writing small examples for these:
+
+⭐⭐⭐⭐⭐ <form>, required, pattern
+⭐⭐⭐⭐ <textarea>, <select>, <picture>, <article>
+⭐⭐⭐ <fieldset>, <legend>, <thead>, <tbody>, <tfoot>, autocomplete, novalidate
+
+These are the tags and attributes that come up most often in frontend HTML interviews.
+
+
