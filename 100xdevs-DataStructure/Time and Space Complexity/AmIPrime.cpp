@@ -1,8 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
  
-
- 
 int main() {
 long long n;
 cin >> n;
@@ -21,20 +19,29 @@ for(long long i=1; i*i<=n; i++){
     }
   
 }
- cout << c << endl;
+ if(c==2){
+     cout << "YES";
+ }else{
+     cout << "NO";
+ }
 }
  
  
  
 // 12
 
-//6
- 
- // Logic
- // root - i*i<=n || (n%i) -> j=n/i || i==j -> c++ else c=c+2;
+//NO
 
- //================
- 
+// 17
+
+// YES
+
+
+// Logic
+// root - i*i<=n || (n%i) -> j=n/i || i==j -> c++ else c=c+2; || c==2 , yes else No
+
+//================
+
 //  12 => 1 2 3 4 6 12
 
 //  1*12 = 12
@@ -64,3 +71,4 @@ for(long long i=1; i*i<=n; i++){
 // if no pair then only 1 factor count then c++
 
 
+// c==2 , Yes or No
