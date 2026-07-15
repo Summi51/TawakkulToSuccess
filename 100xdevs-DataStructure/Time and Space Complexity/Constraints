@@ -1,0 +1,41 @@
+|             N | Suitable Complexity |
+| ------------: | :------------------ |
+|            10 | O(n!)               |
+|            20 | O(2ⁿ)               |
+|           500 | O(n³)               |
+|          2000 | O(n²)               |
+|  100000 (10⁵) | O(n log n), O(n)    |
+| 1000000 (10⁶) | O(n)                |
+|           10⁹ | O(log n), O(√n)     |
+
+
+//============================================
+
+Hum 10^8 operations per second ka estimate lete hain.
+
+Ye sirf computer ki approximate speed batata hai.
+
+Jaise
+
+10^6
+
+operations
+
+bahut fast.
+
+10^8
+
+lagbhag 1 second.
+
+10^9
+
+lagbhag 10 second.
+
+10^12
+
+lagbhag
+
+10000 seconds
+≈ 2.7 hours
+
+😅 Isliye TLE.
