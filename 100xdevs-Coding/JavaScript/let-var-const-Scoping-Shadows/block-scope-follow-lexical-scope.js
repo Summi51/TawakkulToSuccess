@@ -21,3 +21,4 @@ const f1 = 20; // script
 }
 
 
+// Arrow function snd function are same in scoping.
