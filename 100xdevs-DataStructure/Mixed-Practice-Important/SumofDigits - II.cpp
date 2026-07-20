@@ -20,4 +20,5 @@ int main() {
 // 4
 
 // Logic
-// sum = sum + a[i] - 48
+// sum = sum + a[i] - 48 or sum + s[i] - '0';
+
