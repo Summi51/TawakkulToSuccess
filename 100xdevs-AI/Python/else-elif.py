@@ -11,12 +11,12 @@ else:
     # or 
 
 
-    def get_game(player , computer):
+#     def get_game(player , computer):
     
-    if player == computer:
-        print("Tie!")
-    elif player == 'rock' and computer == 'paper':
-        print("computer win! paper cover rock")
-    elif player == 'scissors' and computer == 'paper':
-        print("player Win! scissors cut paper")
-get_game('scissors', 'paper')
+#     if player == computer:
+#         print("Tie!")
+#     elif player == 'rock' and computer == 'paper':
+#         print("computer win! paper cover rock")
+#     elif player == 'scissors' and computer == 'paper':
+#         print("player Win! scissors cut paper")
+# get_game('scissors', 'paper')
