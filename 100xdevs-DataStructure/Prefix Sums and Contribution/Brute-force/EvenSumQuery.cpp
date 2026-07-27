@@ -33,6 +33,8 @@ int main() {
       cout << sum << endl;
    }
 	}
+// TC - O(q*n) -> 10^5 * 10^5 
+// SC - O(1)
 
 // 5
 // 1 2 3 4 5
