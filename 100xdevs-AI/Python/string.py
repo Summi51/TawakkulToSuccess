@@ -25,3 +25,19 @@ print("99".isalnum()) # True - check digit and not empty
 print("99".isdecimal()) # True - check decimal and not empty
 print("sgn".islower()) # True - check is lower case 
 print("sgn".isupper()) # False - check is upper case
+
+
+print("sgn".startswith('s')) # True
+print("sg".endswith("g")) # True
+
+print("sg".replace("s", "k")) # string.replace(old, new) # kg
+
+print("sum".split()) # ['sum'] , char saparatoe
+
+print(" sum".strip()) # trim white space # sum
+
+print(",".join("samreen")) # s,a,m,r,e,e,n
+
+print("sum".find("m")) # 2
+
+print(len("sum")) # 3
