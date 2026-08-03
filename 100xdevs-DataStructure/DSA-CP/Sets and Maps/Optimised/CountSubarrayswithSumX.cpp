@@ -22,7 +22,7 @@ int main() {
 	    long long req = pre-x; // p[r] - x = p[l-1];
 	
 	   if(pre==x){
-        cout << ans++;
+         ans++;
        }
 
 	    if(mp.count(req)){ // p[r]-x = p[l-1] ye p[l-1] nikal rhe h ye,
@@ -43,10 +43,7 @@ int main() {
 // 3 4
 
 
-// Logic: pre += arr[i] 
-// (current prefix sum) → req = pre - x 
-// (required previous prefix) → if(pre == x) ans++ → 
-// if(mp.count(req)) ans += mp[req] → mp[pre]++ (store frequency of current prefix).
+// Logic: pre += arr[i] (current prefix sum) → req = pre - x (required previous prefix) → if(pre == x) ans++ → if(mp.count(req)) ans += mp[req] → mp[pre]++ (store frequency of current prefix).
 
 //=+++++++++++++
 
