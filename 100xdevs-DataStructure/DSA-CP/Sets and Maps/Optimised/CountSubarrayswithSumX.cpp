@@ -9,7 +9,6 @@ int main() {
 	long long arr[n];
 	
 	for(long long i=0; i<n; i++){
-	    cin >> arr[i];
 	}
 
    map<long long, long long>mp;
