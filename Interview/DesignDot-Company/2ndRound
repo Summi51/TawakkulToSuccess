@@ -1,0 +1,92 @@
+// Flatten Array
+
+const arr = [1, 2, [3, [6, 7]], 3, 5, 2]
+
+// flatten this array but not used flat method ??
+// expected output: [1,2,3,6,7,3,5,2]
+
+
+function fn(arr){
+     let store = []
+
+       for(let i=0; i<arr.length; i++){
+        if(Array.isArray(arr[i])){
+            let value = fn(arr[i]); 
+
+        for(let j=0; j<value.length;  j++){
+                store.push(value[j])
+            }
+        } else{
+         store.push(arr[i])
+        }
+       }
+
+       return store;
+}
+console.log(fn(arr))
+
+
+//=======================
+
+// here what is this? callback Hell
+
+const fs = require("fs");
+
+fs.readFile("file1.txt", "utf8", (err, data1) => {
+  if (err) return console.log(err);
+
+  fs.readFile("file2.txt", "utf8", (err, data2) => {
+    if (err) return console.log(err);
+
+    fs.readFile("file3.txt", "utf8", (err, data3) => {
+      if (err) return console.log(err);
+
+      console.log(data1, data2, data3);
+    });
+  });
+});
+
+
+//============================
+
+// unique value 
+// without any built in function ??
+
+// const arr = [1, 2,3, 6, 7,3, 5, 2]
+// expected arr = [1,2,3,6,7,5]
+
+
+// Using Inbuild Methods
+
+arr.forEach((i)=> {
+   if(!valueUnique.includes(i)){
+    valueUnique.push(i)
+   }
+})      
+
+console.log(valueUnique)
+
+//===========================
+
+
+// const arr = [1, 2,3, 6, 7,3, 5, 2]
+const valueUnique = []
+
+for(let i=0; i<arr.length; i++){
+
+  let isflag = false;
+
+  for(let j=0; j<i; j++){
+    if(arr[i]==arr[j]){
+        isflag = true;
+         break;
+    }
+  }
+ if(!isflag){
+    valueUnique.push(arr[i])
+ }
+
+}
+
+console.log(valueUnique)
+
