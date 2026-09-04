@@ -1,0 +1,59 @@
+
+1. // button - false and true showed
+
+
+2. // using contextApi button remove and showed
+
+// import { BtnProvider } from './ThemeContext';
+// import { createRoot } from 'react-dom/client';
+// import './index.css';
+// import App from './App.tsx';
+
+// createRoot(document.getElementById('root')!).render(
+//   <BtnProvider>
+//     <App />
+//   </BtnProvider>
+// );
+
+
+//===========
+
+// import { useState } from 'react';
+// import { useBtn } from './ThemeContext';
+
+// function App() {
+//   const { btn, toggle } = useBtn();
+
+//   return (
+//     <div>
+//       {btn && <button onClick={toggle}>Remove This </button>}
+
+//       {/* {!btn && <button onClick={toggle}>Show This </button>} */}
+//     </div>
+//   );
+// }
+
+// export default App;
+
+//============
+
+// import { createContext, useContext, useState } from 'react';
+
+// const BtnContext = createContext();
+
+// export const BtnProvider = ({ children }) => {
+//   const [btn, setBtn] = useState(true);
+
+//   const toggle = () => {
+//     setBtn(!btn);
+//   };
+
+//   return (
+//     <BtnContext.Provider value = {{ btn, toggle }}>
+      
+//       {children}
+//     </BtnContext.Provider>
+//   );
+// };
+
+// export const useBtn = () => useContext(BtnContext);
